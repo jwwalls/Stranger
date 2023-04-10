@@ -73,3 +73,4 @@ export const fetchPosts = async () => {
     console.error(err);
   }
 }
+

@@ -2,6 +2,8 @@ import "./App.css";
 import { useState, useEffect } from "react";
 import Register from "./components/Register";
 import { fetchMe, login } from "./api/auth";
+import RRoutes from "./components/Routes";
+import Nav from "./components/Nav";
 
 function App() {
   const [token, setToken] = useState(localStorage.getItem("token"));
@@ -24,7 +26,9 @@ function App() {
     }
   }, [token]);
   return (
+
     <div className="App">
+      <Nav></Nav>
       <h1>{user?.username}</h1>
       <Register setToken={setToken} />      
     </div>
