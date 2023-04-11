@@ -34,7 +34,7 @@ export const fetchMe = async (token) => {
       },
     });
     const result = await response.json();
-    console.log(result);
+   
     return result;
   } catch (error) {
     console.error(error);
@@ -66,11 +66,11 @@ export const fetchPosts = async () => {
   try {
     const response = await fetch(`${BASE_URL}/posts`)
 
-    const result = await response.json();
-    console.log(result);
+    const result = await response.json();    
     return result
   } catch (err) {
     console.error(err);
   }
 }
+
 

@@ -11,7 +11,7 @@ const Register = ({ setToken }) => {
 
     localStorage.setItem("token", token);
     setToken(token);
-    console.log(username, password);
+    
   };
 
   const handleLogin = async (e) => {
@@ -19,7 +19,7 @@ const Register = ({ setToken }) => {
     const user = await login(username, password);
     localStorage.setItem("token", user.data.token);
     setToken(user.data.token);
-    console.log(user.data.token);
+   
   }
 
   return (

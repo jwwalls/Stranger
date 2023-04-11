@@ -30,7 +30,8 @@ function App() {
     <div className="App">
       <Nav></Nav>
       <h1>{user?.username}</h1>
-      <Register setToken={setToken} />      
+      <Register setToken={setToken} />     
+      <RRoutes /> 
     </div>
     
   );
