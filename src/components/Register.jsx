@@ -11,6 +11,7 @@ const Register = ({ setToken }) => {
 
     localStorage.setItem("token", token);
     setToken(token);
+    alert("Registration successful");
     
   };
 
@@ -19,6 +20,7 @@ const Register = ({ setToken }) => {
     const user = await login(username, password);
     localStorage.setItem("token", user.data.token);
     setToken(user.data.token);
+    alert("Login successful");
    
   }
 

@@ -16,8 +16,8 @@ const PostElement = ({
     <div className="book">
       <div className="breedInfo">
         <div>   
-            <h1>{id}</h1>         
-          <h3>{title}</h3>
+                   
+          <h1>{title}</h1>
           <h4>{location}</h4>
           <h4>{price}</h4>
           <h4>{description}</h4>

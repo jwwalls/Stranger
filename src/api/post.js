@@ -3,8 +3,7 @@ const BASE_URL = `https://strangers-things.herokuapp.com/api/${cohort}`;
 
 export const fetchPosts = async () => {
     try {
-      const response = await fetch(`${BASE_URL}/posts`)
-  
+      const response = await fetch(`${BASE_URL}/posts`)  
       const result = await response.json();    
       return result
     } catch (err) {

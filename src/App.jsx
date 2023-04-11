@@ -8,14 +8,13 @@ import Nav from "./components/Nav";
 function App() {
   const [token, setToken] = useState(localStorage.getItem("token"));
   const [user, setUser] = useState({});
-  console.log(user, "User data");
-  const logOut = () => {    
+   
+  const logOut = () => {
     setToken(null);
     setUser({});
     localStorage.removeItem("token");
-    
-  }
-
+    alert("You have been logged out");
+  };
   useEffect(() => {
     const getMe = async () => {
       const { data } = await fetchMe(token);
@@ -26,15 +25,16 @@ function App() {
     }
   }, [token]);
   return (
-
     <div className="App">
-      <Nav></Nav>
-      <h1>{user?.username}</h1>
-      <button onClick={logOut}>Logout</button>
-      <Register setToken={setToken} />     
-      <RRoutes /> 
+      <Nav></Nav>      
+      <div className="navBar">
+      <div className="userName">Logged in as: {user?.username}</div>
+        <button className="logoutButton" onClick={logOut}>
+          Logout
+        </button>
+      </div>
+      <RRoutes setToken={setToken} />
     </div>
-    
   );
 }
 

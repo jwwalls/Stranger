@@ -5,12 +5,14 @@ import { Link } from "react-router-dom";
 
 const Nav = () => {
   return (
-    <div className="headerL" >
+    <div className="navLinks" >
       
       <Link class="Navlink" to="/">Stranger's Things</Link>
-      <Link class="Navlink" to="/home">home</Link>
+      <div className="navDivider">      
       <Link class="Navlink" to="/posts">posts</Link>
       <Link class="Navlink" to="/profile">profile</Link>
+      </div>
+     
      
       
     </div>

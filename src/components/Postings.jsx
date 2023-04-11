@@ -36,9 +36,10 @@ export const Postings = () => {
   
     return (
       <div>
+        <label htmlFor="searchBar">Search: </label>
         <input type="text" value={searchTerm} onChange={handleSearchChange} />
         <button className="addButton" onClick={() => nav(`/posts/add`)}>
-          New Listing
+          Make New Listing
         </button>
         {filteredPosts.map(
           ({ _id, title, location, price, description, createdAt, updatedAt }) => (
