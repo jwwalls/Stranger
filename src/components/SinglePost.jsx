@@ -4,16 +4,21 @@ import { useParams } from "react-router-dom";
 const cohort = "2303-FTB-MT-WEB-FT";
 const BASE_URL = `https://strangers-things.herokuapp.com/api/${cohort}`;
 
-export const singlePost = () => {
+export const SinglePost = () => {
     const { id } = useParams();
     const [post, setPost] = useState({});
+    
 
     useEffect(() => {
-        fetch(`${BASE_URL}/posts/${id}`)
-          .then(res => res.json())
-          .then(data => setPost(data));
-          console.log(post);
-    }, [id]);
+        const fetchPost = async () => {
+            const response = await fetch(`${BASE_URL}/posts/${id}`);
+            const data = await response.json();
+            setPost(data);
+            console.log(data);
+        }
+        fetchPost();
+    }, []);
+    
     return (
         <div>
             post
