@@ -17,7 +17,7 @@ export const SinglePost = () => {
       } = await fetchPosts();
       const filteredPosts = posts.filter((post) => post._id === id);
       setPost(filteredPosts[0]);
-      console.log(filteredPosts[0]);
+      console.log(post);
     };
     fetchAllPosts();
   }, []);
