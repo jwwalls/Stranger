@@ -1,12 +1,14 @@
 // @flow
 import React, { useEffect, useState } from "react";
-import { fetchPosts } from "../api/auth";
+import { fetchPosts } from "../api/post";
 import PostElement from "../components/PostElement";
+import { useNavigate } from "react-router-dom";
 import "../App.css";
 
 export const Postings = () => {
     const [posts, setPosts] = useState([]);
     const [searchTerm, setSearchTerm] = useState("");
+    const nav = useNavigate();
   
     useEffect(() => {
       const fetchAllPosts = async () => {
@@ -35,6 +37,9 @@ export const Postings = () => {
     return (
       <div>
         <input type="text" value={searchTerm} onChange={handleSearchChange} />
+        <button className="addButton" onClick={() => nav(`/posts/add`)}>
+          New Listing
+        </button>
         {filteredPosts.map(
           ({ _id, title, location, price, description, createdAt, updatedAt }) => (
             <div key={_id}>

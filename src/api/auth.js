@@ -62,41 +62,4 @@ export const login = async (username, password) => {
   }
 }
 
-export const fetchPosts = async () => {
-  try {
-    const response = await fetch(`${BASE_URL}/posts`)
-
-    const result = await response.json();    
-    return result
-  } catch (err) {
-    console.error(err);
-  }
-}
-
-export const makePost = async (token, title, description, price, location, willDeliver) => {
-  console.log(token, title, description, price, location, willDeliver)
-  try {
-    const response = await fetch(`${BASE_URL}/posts`, {
-      method: "POST",
-      headers: {
-        'Content-Type': 'application/json',
-        'Authorization': `Bearer ${token}`
-      },
-      body: JSON.stringify({
-        post: {
-          title ,
-          description,
-          price,
-          location,   
-          willDeliver
-        }
-      })
-    });
-    const result = await response.json();
-    console.log(result);
-    return result
-  } catch (err) {
-    console.error(err);
-  }
-}
 

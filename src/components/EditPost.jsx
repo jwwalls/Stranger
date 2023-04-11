@@ -1,14 +1,12 @@
 import React, { useState } from "react";
-import {makePost} from "../api/post"
-import { useNavigate } from "react-router-dom";
+import {updatePost} from "../api/post"
 
-function AddPost() {
+function EditPost({id}) {
     const [title, setTitle] = useState("");
     const [description, setDescription] = useState("");
     const [price, setPrice] = useState("");
     const [location, setLocation] = useState("");
     const [willDeliver, setWillDeliver] = useState(false);
-    const navigate = useNavigate();
     
     const handleCheckboxChange = (e) => {
       setWillDeliver(e.target.checked);
@@ -16,10 +14,9 @@ function AddPost() {
     
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const token = localStorage.getItem("token");
-    
-    await makePost(token, title, description, price, location, willDeliver);
-    navigate("/posts");
+    const token = localStorage.getItem("token");    
+    await updatePost(id, token, title, description, price, location, willDeliver);
+    window.location.reload();
    
   };
     return (
@@ -57,10 +54,10 @@ function AddPost() {
               onChange={handleCheckboxChange}
             />
           </label>
-          <button type="submit">Submit</button>
+          <button type="submit">Edit Post</button>
         </form>
       </div>
     );
   }
 
-export default AddPost;
+export default EditPost;

@@ -30,6 +30,7 @@ function App() {
     <div className="App">
       <Nav></Nav>
       <h1>{user?.username}</h1>
+      <button onClick={logOut}>Logout</button>
       <Register setToken={setToken} />     
       <RRoutes /> 
     </div>
