@@ -4,21 +4,59 @@
   padding: 2rem;
   text-align: center;
 }
-.navLinks{
+.navLinks{ 
   display: flex;
-  justify-content: center;
+  align-items: center;
   justify-content: space-between;
-  marg
+  margin-right: 10px;
+  gap: 600px;
+
+
+  
+}
+.userName{
+  display: flex;
+  align-items: center;
 }
 .navBar{
   display: flex;
   justify-content: flex-end;
-  margin-right: 5px;
+  
   gap: 5px;  
 }
 .navDivider{
   display: flex;  
   gap: 20px;
 }
+.loginContainer{
+  display: flex;
+  flex-direction: column;
+  height: 70%;
+}
+.loginText{
+  height: 140px;
+  font-size: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.loginForm{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  gap: 10px;
+  
+}
+.loginForm input{
+  font-size: 30px;
+}
+.flipButton{
+  font-size: 10px;
 
+}
+ *{
+  border:  1px solid black;
+ }
 

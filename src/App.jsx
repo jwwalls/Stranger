@@ -8,7 +8,7 @@ import Nav from "./components/Nav";
 function App() {
   const [token, setToken] = useState(localStorage.getItem("token"));
   const [user, setUser] = useState({});
-   
+
   const logOut = () => {
     setToken(null);
     setUser({});
@@ -26,13 +26,15 @@ function App() {
   }, [token]);
   return (
     <div className="App">
-      <Nav></Nav>      
       <div className="navBar">
-      <div className="userName">Logged in as: {user?.username}</div>
+        <Nav></Nav>
+
+        <div className="userName">{user?.username}</div>
         <button className="logoutButton" onClick={logOut}>
           Logout
         </button>
       </div>
+
       <RRoutes setToken={setToken} />
     </div>
   );

@@ -6,7 +6,7 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: #3f5247;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -14,12 +14,10 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
-*{
-  border: 1px solid white;
-}
+
 a {
   font-weight: 500;
-  color: #646cff;
+  color: #878ab4;
   text-decoration: inherit;
 }
 a:hover {
