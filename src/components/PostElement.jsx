@@ -13,22 +13,42 @@ const PostElement = ({
 }) => {
   const nav = useNavigate();
   return (
-    <div className="book">
-      <div className="breedInfo">
-        <div>   
-                   
-          <h1>{title}</h1>
-          <h4>{location}</h4>
-          <h4>{price}</h4>
-          <h4>{description}</h4>
-          <h4>{createdAt}</h4>
-          <h4>{updatedAt}</h4>
-        </div>
-
-        <button className="daButton" onClick={() => nav(`/posts/${id}`)}>
-          More Info
-        </button>
+    <div className="postCard">
+      <div className="postHeader">
+      <h1>{title}</h1>
+      <button className="daButton" onClick={() => nav(`/posts/${id}`)}>
+        More Info
+      </button>
       </div>
+      <div className="table">
+      <table>
+ 
+  <tr>
+    <td>Title</td>
+    <td>{title}</td>
+  </tr>
+  <tr>
+    <td>Location</td>
+    <td>{location}</td>
+  </tr>
+  <tr>
+    <td>Asking Price</td>
+    <td>{price}</td>
+  </tr>
+  <tr>
+    <td>Description</td>
+    <td>{description}</td>
+  </tr>
+  <tr>
+    <td>Posted At</td>
+    <td>{createdAt}</td>
+  </tr>
+  <tr>
+    <td>Last Update</td>
+    <td>{updatedAt}</td>
+  </tr>
+</table>
+</div>
     </div>
   );
 };

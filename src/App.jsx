@@ -4,6 +4,7 @@ import Register from "./components/Register";
 import { fetchMe, login } from "./api/auth";
 import RRoutes from "./components/Routes";
 import Nav from "./components/Nav";
+import { Link } from "react-router-dom";
 
 function App() {
   const [token, setToken] = useState(localStorage.getItem("token"));
@@ -27,12 +28,15 @@ function App() {
   return (
     <div className="App">
       <div className="navBar">
-        <Nav></Nav>
-
+        <Link className="navTitle" to="/">
+          Stranger's Things
+        </Link>
+        <div className="navEnd"><Nav></Nav>
         <div className="userName">{user?.username}</div>
         <button className="logoutButton" onClick={logOut}>
           Logout
-        </button>
+        </button></div>
+        
       </div>
 
       <RRoutes setToken={setToken} />
