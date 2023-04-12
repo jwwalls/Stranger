@@ -23,10 +23,7 @@ const PostElement = ({
       <div className="table">
       <table>
  
-  <tr>
-    <td>Title</td>
-    <td>{title}</td>
-  </tr>
+ 
   <tr>
     <td>Location</td>
     <td>{location}</td>
