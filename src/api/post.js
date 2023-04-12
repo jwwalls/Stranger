@@ -83,4 +83,27 @@ export const fetchPosts = async () => {
       console.error(err);
     }
   }
+
+  export const postMessage = async (id, token, content) => {
+    try {
+      const response = await fetch(`${BASE_URL}/posts/${id}/messages`, {
+        method: "POST",
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${token}`
+        },
+        body: JSON.stringify({
+          message: {
+            content
+          }
+        })
+      });
+      const result = await response.json();
+      console.log(result);
+      return result
+    } catch (err) {
+      console.error(err);
+    }
+  }
+  
   

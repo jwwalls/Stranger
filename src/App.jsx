@@ -1,7 +1,6 @@
 import "./App.css";
 import { useState, useEffect } from "react";
-import Register from "./components/Register";
-import { fetchMe, login } from "./api/auth";
+import { fetchMe } from "./api/auth";
 import RRoutes from "./components/Routes";
 import Nav from "./components/Nav";
 import { Link, useNavigate } from "react-router-dom";
@@ -9,7 +8,6 @@ import { Link, useNavigate } from "react-router-dom";
 function App() {
   const [token, setToken] = useState(localStorage.getItem("token"));
   const [user, setUser] = useState({});
-
   const navigate = useNavigate();
 
   const logOut = () => {
@@ -50,7 +48,6 @@ function App() {
           )}
         </div>
       </div>
-
       <RRoutes setToken={setToken} />
     </div>
   );
