@@ -123,6 +123,31 @@ td{
   border: 1px solid ;
   padding: 10px;
 }
+.addText{
+  height: 140px;
+  font-size: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.addContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.addForm{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  gap: 10px;
+}
+.addForm input{
+  font-size: 30px;
+}
 
 
 

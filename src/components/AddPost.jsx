@@ -23,20 +23,16 @@ function AddPost() {
    
   };
     return (
-      <div>
-        <form onSubmit={handleSubmit}>
+      <div className="addContainer">
+        <div className="addText">Add New</div>
+        <form className="addForm" onSubmit={handleSubmit}>
           <input
             type="text"
             value={title}
             onChange={(e) => setTitle(e.target.value)}
             placeholder="Title"
           />
-          <input
-            type="text"
-            value={description}
-            onChange={(e) => setDescription(e.target.value)}
-            placeholder="Description"
-          />
+         
           <input
             type="text"
             value={price}
@@ -48,6 +44,12 @@ function AddPost() {
             value={location}
             onChange={(e) => setLocation(e.target.value)}
             placeholder="Location"
+          />
+           <input
+            type="text"
+            value={description}
+            onChange={(e) => setDescription(e.target.value)}
+            placeholder="Description"
           />
           <label>
             Willing to deliver:
