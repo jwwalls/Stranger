@@ -18,18 +18,37 @@ export const Profile = () => {
     },[]);
     return (
         <div>
-            <div>{user.username}</div>
-            <div>{user.cohort}</div>
-            {user.messages && user.messages.map((message) => (
-                <div key={message._id}>{message.content}{message.fromUser.username}{message.post.title}
+          <div className='postText'>Profile</div>
+          <div className='profileUser'>Username: {user.username}</div>
+          <div className='profileCohort'>Chort: {user.cohort}</div>
+          <div className='profileMessages'>
+            <div className='messagesText'>Messages</div>
+            {user.messages &&
+              user.messages.map((message) => (
+                <div className='message' key={message._id}>
+                     <div>Post title: {message.post.title}</div>
+                     <div>From user: {message.fromUser.username}</div>
+                  <div>Message Content: {message.content}</div>
+                  
+                 
                 </div>
-            ))}
-            {user.posts && user.posts.map((post) => (
-                <div key={post._id}>{post.title}{post.price}{post.location}{post.description}</div>
-            ))}
-
-            }
+              ))}
+          </div>
+      
+          <div className='profilePostings'>
+            <div className='postingsText'>Postings</div>
+            {user.posts &&
+              user.posts.map((post) => (
+                <div className='post' key={post._id}>
+                  <div>Title: {post.title}</div>
+                  <div>Price: {post.price}</div>
+                  <div>Location: {post.location}</div>
+                  <div>Description: {post.description}</div>
+                </div>
+              ))}
+          </div>
         </div>
-    );
+      );
+      
     
 };

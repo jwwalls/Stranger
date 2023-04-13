@@ -146,6 +146,33 @@ td{
 .addForm input{
   font-size: 30px;
 }
+.message{
+  border: 1px solid;
+  margin: 5px;
+  width: 500px;
+}
+.messagesText{
+  
+  height: 140px;
+  font-size: 60px;
+  display: flex;
+  align-items: center;  
+  margin-top: 50px;
+  
+}
+.postingsText{
+  height: 140px;
+  font-size: 60px;
+  display: flex;
+  align-items: center;  
+  margin-top: 50px;
+
+}
+.post{
+  border: 1px solid;
+  margin: 5px;
+  width: 500px;
+}
 
 
 
