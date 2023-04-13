@@ -1,48 +1,46 @@
-.logoutButton{
-  margin-right: 5px;;
+.logoutButton {
+  margin-right: 5px;
 }
 
-.navTitle{
+.navTitle {
   font-size: 30px;
   display: flex;
-  
 }
-.navLinks{ 
+.navLinks {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-right: 10px;  
-  
+  margin-right: 10px;
 }
-.userName{
+.userName {
   display: flex;
   align-items: center;
 }
-.navBar{
+.navBar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid ;
+  border-bottom: 1px solid;
   height: 50px;
-  gap: 5px;  
+  gap: 5px;
 }
-.navDivider{
-  display: flex; 
+.navDivider {
+  display: flex;
   align-items: center;
   gap: 20px;
 }
-.navEnd{
+.navEnd {
   display: flex;
   justify-content: space-between;
   gap: 20px;
   margin-right: 5px;
 }
-.loginContainer{
+.loginContainer {
   display: flex;
   flex-direction: column;
   height: 70%;
 }
-.loginText{
+.loginText {
   height: 140px;
   font-size: 120px;
   display: flex;
@@ -51,27 +49,24 @@
   margin-top: 50px;
   margin-bottom: 50px;
 }
-.loginForm{
+.loginForm {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin: 10px;
   gap: 10px;
-  
 }
-.loginForm input{
+.loginForm input {
   font-size: 30px;
 }
-.flipButton{
+.flipButton {
   font-size: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
-
-
 }
-.postText{
+.postText {
   height: 140px;
   font-size: 120px;
   display: flex;
@@ -80,24 +75,24 @@
   margin-top: 50px;
   margin-bottom: 50px;
 }
-.postBar{
+.postBar {
   display: flex;
   justify-content: center;
   gap: 10px;
   margin-bottom: 20px;
 }
-.searchLabel{
+.searchLabel {
   display: flex;
   align-items: center;
 }
-.orDiv{
+.orDiv {
   font-size: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.postCard{
-  border: 1px solid ;
+.postCard {
+  border: 1px solid;
   display: flex;
   flex-direction: column;
   margin-bottom: 10px;
@@ -105,23 +100,19 @@
   padding-right: 20px;
   padding-bottom: 20px;
 }
-.postCard div{
+.postCard div {
   padding: 10px;
-  
 }
-.postHeader{
+.postHeader {
   display: flex;
   justify-content: space-between;
 }
 
-#root{
-  
-}
-td{
-  border: 1px solid ;
+td {
+  border: 1px solid;
   padding: 10px;
 }
-.addText{
+.addText {
   height: 140px;
   font-size: 120px;
   display: flex;
@@ -130,12 +121,12 @@ td{
   margin-top: 50px;
   margin-bottom: 50px;
 }
-.addContainer{
+.addContainer {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-.addForm{
+.addForm {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -143,37 +134,32 @@ td{
   margin: 10px;
   gap: 10px;
 }
-.addForm input{
+.addForm input {
   font-size: 30px;
 }
-.message{
+.message {
   border: 1px solid;
   margin: 5px;
   width: 500px;
+  padding: 4px;
 }
-.messagesText{
-  
+.messagesText {
   height: 140px;
   font-size: 60px;
   display: flex;
-  align-items: center;  
+  align-items: center;
   margin-top: 50px;
-  
 }
-.postingsText{
+.postingsText {
   height: 140px;
   font-size: 60px;
   display: flex;
-  align-items: center;  
+  align-items: center;
   margin-top: 50px;
-
 }
-.post{
+.post {
   border: 1px solid;
   margin: 5px;
   width: 500px;
+  padding: 4px;
 }
-
-
-
-

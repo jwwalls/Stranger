@@ -10,13 +10,12 @@ const Register = ({ setToken }) => {
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
-    e.preventDefault();  
+    e.preventDefault();
     const token = await registerUser(username, password);
 
     localStorage.setItem("token", token);
     setToken(token);
     alert("Registration successful");
-    
   };
 
   const handleLogin = async (e) => {
@@ -26,8 +25,7 @@ const Register = ({ setToken }) => {
     setToken(user.data.token);
     alert("Login successful");
     navigate("/posts");
-   
-  }
+  };
 
   const toggleForm = () => {
     setIsLogin(!isLogin);
@@ -36,7 +34,7 @@ const Register = ({ setToken }) => {
   return (
     <div className="loginContainer">
       <div className="loginText">{isLogin ? "Log In" : "Register"}</div>
-      <div >
+      <div>
         {isLogin ? (
           <form className="loginForm" onSubmit={handleLogin}>
             <input
@@ -72,9 +70,11 @@ const Register = ({ setToken }) => {
         )}
       </div>
       <div className="flipButton">
-      <button  onClick={toggleForm}>
-        {isLogin ? "Don't have an account? Register" : "Already have an account? Log in"}
-      </button>
+        <button onClick={toggleForm}>
+          {isLogin
+            ? "Don't have an account? Register"
+            : "Already have an account? Log in"}
+        </button>
       </div>
     </div>
   );

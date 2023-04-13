@@ -12,7 +12,6 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
-  
   padding-top: 0;
 }
 a {
@@ -39,13 +38,9 @@ button {
 button:hover {
   transform: translateY(-4px) translateX(-2px);
   box-shadow: 2px 5px 0 0 black;
-};
+}
 
 button:active {
   transform: translateY(2px) translateX(1px);
   box-shadow: 0 0 0 0 black;
-};
-body{
-  background-color: #f5f5f5;
 }
-

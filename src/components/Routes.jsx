@@ -6,18 +6,15 @@ import { SinglePost } from "./SinglePost";
 import AddPost from "./AddPost";
 import { Profile } from "./Profile";
 
-
-const RRoutes = ({setToken}) => {
-    
+const RRoutes = ({ setToken }) => {
   return (
     <div>
       <Routes>
-        <Route path="/" element={<Register setToken={setToken}/>}></Route>        
-        
+        <Route path="/" element={<Register setToken={setToken} />}></Route>
         <Route path="/posts" element={<Postings />}></Route>
         <Route path="/posts/add" element={<AddPost />}></Route>
         <Route path="/posts/:id" element={<SinglePost />}></Route>
-        <Route path="/profile" element={<Profile />}></Route>       
+        <Route path="/profile" element={<Profile />}></Route>
       </Routes>
     </div>
   );
