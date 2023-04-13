@@ -30,8 +30,7 @@ export const fetchPosts = async () => {
           }
         })
       });
-      const result = await response.json();
-      console.log(result);
+      const result = await response.json();    
       alert("Post created successfully");
       return result
     } catch (err) {
@@ -57,8 +56,7 @@ export const fetchPosts = async () => {
           }
         })
       });
-      const result = await response.json();
-      console.log(result);
+      const result = await response.json();     
       alert("Post updated successfully");
       return result
     } catch (err) {
@@ -75,8 +73,7 @@ export const fetchPosts = async () => {
           'Authorization': `Bearer ${token}`
         }
       });
-      const result = await response.json();
-      console.log(result);
+      const result = await response.json();      
       alert("Post deleted successfully");
       return result
     } catch (err) {
@@ -99,7 +96,7 @@ export const fetchPosts = async () => {
         })
       });
       const result = await response.json();
-      console.log(result);
+      alert("Message posted successfully");
       return result
     } catch (err) {
       console.error(err);

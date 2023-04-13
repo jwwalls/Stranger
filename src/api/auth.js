@@ -18,7 +18,7 @@ export const registerUser = async (username, password) => {
     const {
       data: { token },
     } = await response.json();
-
+    alert("You have successfully registered!");
     return token;
   } catch (error) {
     console.error(error);
@@ -34,7 +34,7 @@ export const fetchMe = async (token) => {
       },
     });
     const result = await response.json();
-   
+
     return result;
   } catch (error) {
     console.error(error);
@@ -56,10 +56,9 @@ export const login = async (username, password) => {
       }),
     });
     const result = await response.json();
+    alert("You have successfully logged in!");
     return result;
   } catch (error) {
     console.error(error);
   }
-}
-
-
+};
