@@ -41,16 +41,14 @@ export const Profile = () => {
           user.posts
             .filter((post) => post.active) // Filter the posts with `active` set to true
             .map((post) => (
-              <div
-                className="post"
-                key={post._id}
-                onClick={() => (window.location.href = `/posts/${post._id}`)}
-              >
+              <Link key={post._id} to={`/posts/${post._id}`}>
+              <div className="post">
                 <div>Title: {post.title}</div>
                 <div>Price: {post.price}</div>
                 <div>Location: {post.location}</div>
                 <div>Description: {post.description}</div>
               </div>
+            </Link>
             ))}
       </div>
     </div>
