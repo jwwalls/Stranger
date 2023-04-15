@@ -22,6 +22,7 @@ const PostElement = ({
       </div>
       <div className="table">
         <table>
+          <tbody>
           <tr>
             <td>Location</td>
             <td>{location}</td>
@@ -42,6 +43,7 @@ const PostElement = ({
             <td>Last Update</td>
             <td>{updatedAt}</td>
           </tr>
+          </tbody>
         </table>
       </div>
     </div>
